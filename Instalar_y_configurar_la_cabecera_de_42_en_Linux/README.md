@@ -20,7 +20,7 @@ cd 42header
 Dentro de este directorio, encontrarás un archivo llamado `install.sh`, que es el script que instalará la cabecera de 42 en tu entorno. Ejecuta este script:
 
 ```bash
-./install.sh
+./set_header.sh
 ```
 
 Este script agregará los archivos necesarios para que puedas usar el comando `stdheader` en **VIM**.
@@ -28,17 +28,17 @@ Este script agregará los archivos necesarios para que puedas usar el comando `s
 ## Paso 3: Configurar tu nombre de usuario y correo electrónico
 
 Después de instalar el script, necesitarás configurar tu nombre de usuario y correo electrónico para que aparezcan correctamente en la cabecera.
-Para ello, edita el archivo de configuración de la cabecera que se encuentra en `~/.42header`:
+Para ello, debes editar tu archivo de configuración de **VIM** (`~/.vimrc`). Si no tienes este archivo, puedes crearlo. Abre **VIM** y edita este archivo con el siguiente comando:
 
 ```bash
-vim ~/.42header
+vim ~/.vimrc
 ```
 
-Dentro de este archivo, verás dos líneas donde puedes especificar tu nombre de usuario y tu correo electrónico. Edita las líneas correspondientes:
+Dentro de este archivo, deberás añadir dos líneas donde puedes especificar tu nombre de usuario y tu correo electrónico:
 
 ```bash
-USER="tu_nombre"
-MAIL="tu_email@student.42.fr"
+let g:user42='tu_nombre'
+let g:mail42='tu_email@student.42.f'
 ```
 
 Guarda los cambios y cierra el archivo.
@@ -48,7 +48,7 @@ Guarda los cambios y cierra el archivo.
 ##### 1.-  Editar el archivo `.vimrc`
 `
 `
-Para que **VIM** inserte la cabecera automáticamente o mediante una combinación de teclas, debes editar tu archivo de configuración de **VIM** (`~/.vimrc`). Si no tienes este archivo, puedes crearlo. Abre **VIM** y edita este archivo con el siguiente comando:
+Para que **VIM** inserte la cabecera automáticamente o mediante una combinación de teclas, debes editar nuevamente tu archivo de configuración de **VIM** (`~/.vimrc`): 
 
 ```bash
 vim ~/.vimrc
@@ -90,11 +90,3 @@ Una vez configurado, puedes verificar que la cabecera se inserta correctamente. 
 /*                                                                            */
 /* ************************************************************************** */
 ```
-
-### Resumen
-
-1. Clona el repositorio `42header` desde GitHub.
-2. Ejecuta el script de instalación `install.sh`.
-3. Configura tu nombre y correo en `~/.42header`.
-4. Edita tu archivo `.vimrc` para insertar la cabecera automáticamente o mediante una combinación de teclas.
-5. ¡Listo! Tu cabecera de 42 se insertará en los archivos que crees con **VIM** en tu entorno Linux.
