@@ -17,7 +17,7 @@ Ve al directorio del repositorio clonado:
 cd 42header
 ```
 
-Dentro de este directorio, encontrarás un archivo llamado `install.sh`, que es el script que instalará la cabecera de 42 en tu entorno. Ejecuta este script:
+Dentro de este directorio, encontrarás un archivo llamado `set_header.sh`, que es el script que instalará la cabecera de 42 en tu entorno. Ejecuta este script:
 
 ```bash
 ./set_header.sh
